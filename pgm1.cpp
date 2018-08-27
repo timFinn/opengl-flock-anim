@@ -1,10 +1,7 @@
 #include <GL/glut.h>
 #include <stdio.h>
-//#include <iostream>
 
 #include "my_setup_3D_18.h"
-
-//using namespace std;
 
 #define canvas_Width 640
 #define canvas_Height 480
@@ -25,6 +22,12 @@ void drawGoose(int init_x, int init_y)
     glEnd();
 }
 
+void updatePosition()
+{
+    //Code logic for taking value pass in using pointer and update the position
+    //values of the flock members every 75 - 100ms
+}
+
 void display_func()
 {
     glClear(GL_COLOR_BUFFER_BIT);
@@ -39,6 +42,7 @@ void display_func()
 void initRendering()
 {
     glClearColor(0.0, 1.0, 1.0, 1.0);
+    glLineWidth(2.0);
 }
 
 void kbHandler(unsigned char key, int x, int y)
@@ -63,9 +67,9 @@ int main (int argc, char ** argv)
 
     my_setup(canvas_Width, canvas_Height, canvas_Name);
     initRendering();
-    glutKeyboardFunc(kbHandler);
 
     glutDisplayFunc(display_func);
+    glutKeyboardFunc(kbHandler);
 
     glutMainLoop();
     return 0;
