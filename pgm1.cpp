@@ -1,6 +1,6 @@
+//	CS 445/545 Prog 1 for Timothy Finnegan
+
 /****
-	CS 445 Program 1
-	Written by Timothy Finnegan
 
 	Software Architecture Statement
 	
@@ -18,7 +18,6 @@
 ****/
 
 #include <GL/glut.h>
-#include <stdio.h>
 #include <iostream>
 #include <cmath>
 
@@ -207,8 +206,8 @@ void kbHandler(unsigned char key, int x, int y)
 
 void initRendering()
 {
-    glClearColor(1.0, 1.0, 1.0, 1.0);
-    glLineWidth(1.0);
+    glClearColor(1.0, 1.0, 1.0, 1.0);	// set background to white
+    glLineWidth(1.0);					// set line width to 1
 }
 
 int main (int argc, char ** argv)
